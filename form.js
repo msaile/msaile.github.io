@@ -31,7 +31,7 @@ $(document).ready(function(){
 
       } else if (s_input.match(/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g)) {
         // for ip addresses
-        window.open(`http://www.${s_input}`, "_self", false);
+        window.open(`http://${s_input}`, "_self", false);
         $("#search-input").val(''); 
 
       } else if (s_input.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)) {
