@@ -4,11 +4,11 @@ $('#search-input').keyup(function(){
     $('#search-input').blur(); 
     $('#clock').show();
     $("body").css("background-color", "rgb(27,32,40)"); 
-  } else if ($(this).val().match(\W/r\/+/g)) {
+  } else if ($(this).val().match(/r\/+/g)) {
     $("body").css("background-image", "linear-gradient(rgb(255, 132, 86), rgb(255, 69, 0))");
-  } else if ($(this).val().match(\W/tt\/+/g)) {
+  } else if ($(this).val().match(/tt\/+/g)) {
     $("body").css("background-image", "linear-gradient(rgb(29, 161, 242), rgb(25, 96, 143))")
-  } else if ($(this).val().match(\W/yt\/+/g)) {
+  } else if ($(this).val().match(/yt\/+/g)) {
     $("body").css("background-image", "linear-gradient(rgb(205, 32, 31), rgb(205, 76, 31))")
   } else {
     $("body").css("background-image", "none");
@@ -38,16 +38,16 @@ $(document).ready(function(){
         // for urls without http://www or https://www
         window.open(`http://www.${s_input}`, "_self", false);
         $("#search-input").val(''); 
-      } else if (s_input.match(\W/r\/+/g)){
+      } else if (s_input.match(/r\/+/g)){
         // reddit
         window.open(`https://www.reddit.com/${s_input}`, "_self", false)
         $("#search-input").val(''); 
-      } else if (s_input.match(\W/tt\/+/g)) {
+      } else if (s_input.match(/tt\/+/g)) {
         // twitter
         s_input_without_prefix = s_input.replace(/tt\/+/g, '')
         window.open(`https://www.twitter.com/${s_input_without_prefix}`, "_self", false)
         $("#search-input").val(''); 
-      } else if (s_input.match(\W/yt\/+/g)) {
+      } else if (s_input.match(/yt\/+/g)) {
         s_input_without_prefix = s_input.replace(/yt\/+/g, '')
         window.open(`https://www.youtube.com/${s_input_without_prefix}`, "_self", false);
         $("#search-input").val(''); 
