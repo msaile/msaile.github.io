@@ -18,12 +18,13 @@ $('#search-input').keyup(function(){
     $("body").css("background-image", "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)")
   } else if ($(this).val().match(/^mk\/+/g)) {
     $("body").css("background-color", "rgb(50,52,55)")
-    $("body").css("color", "rgb(100,102,105)")
+    $("body").css("color", "rgb(209,208,197)")
     $("body").css("caret-color", "rgb(226,183,20)")
   } else {
     $("body").css("background-image", "none");
     $("body").css("background-color", "rgb(27,32,40)");
     $("body").css("color", "rgb(204,204,181)")
+    $("body").css("caret-color", "auto")
   }
   
 });
@@ -95,6 +96,8 @@ $(document).ready(function(){
 // clearing textarea
 $("textarea").blur(function() {
   $("body").css("background-image", "none");
+  $("body").css("background-color", "rgb(27,32,40)");
+  $("body").css("caret-color", "auto")
   $("#search-input").val(''); 
   $('#search-input').hide();
   $('#clock').show(); 
