@@ -14,6 +14,8 @@ $('#search-input').keyup(function(){
     $("body").css("background-image", "linear-gradient(135deg, rgb(43, 43, 43), rgb(59, 59, 59)")
   } else if ($(this).val().match(/^i\/+/g)) {
     $("body").css("background-image", "linear-gradient(45deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), rgb(193, 53, 132), rgb(225, 48, 108), rgb(253, 29, 29)")
+  } else if ($(this).val().match(/^tw\/+/g)) {
+    $("body").css("background-image", "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)")
   } else {
     $("body").css("background-image", "none");
     $("body").css("background-color", "rgb(27,32,40)");
@@ -65,6 +67,11 @@ $(document).ready(function(){
         // Instagram
         s_input_without_prefix = s_input.replace(/^i\/+/g, '')
         window.open(`https://www.instagram.com/${s_input_without_prefix}`, "_self", false);
+        $("#search-input").val(''); 
+      } else if (s_input.match(/^tw\/+/g)) {
+        // Twitch
+        s_input_without_prefix = s_input.replace(/^tw\/+/g, '')
+        window.open(`https://www.twitch.com/${s_input_without_prefix}`, "_self", false);
         $("#search-input").val(''); 
       } else {
         window.open(`https://www.google.com/search?q=${s_input}`, "_self", false);
