@@ -18,7 +18,8 @@ $('#search-input').keyup(function(){
     $("body").css("background-image", "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)")
   } else if ($(this).val().match(/^mk\/+/g)) {
     $("body").css("background-color", "rgb(50,52,55)")
-    $("body").css("color", "rgb(226,183,20)")
+    $("body").css("color", "rgb(100,102,105)")
+    $("body").css("caret-color", "rgb(226,183,20)")
   } else {
     $("body").css("background-image", "none");
     $("body").css("background-color", "rgb(27,32,40)");
@@ -79,7 +80,8 @@ $(document).ready(function(){
         $("#search-input").val(''); 
       } else if (s_input.match(/^mk\/+/g)) {
         // Monkeytype
-        window.open(`https://www.monkeytype.com/`, "_self", false);
+        s_input_without_prefix = s_input.replace(/^mk\/+/g, '')
+        window.open(`https://www.monkeytype.com/${s_input_without_prefix}`, "_self", false);
         $("#search-input").val(''); 
       } else {
         window.open(`https://www.google.com/search?q=${s_input}`, "_self", false);
