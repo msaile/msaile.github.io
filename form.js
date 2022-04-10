@@ -16,9 +16,13 @@ $('#search-input').keyup(function(){
     $("body").css("background-image", "linear-gradient(45deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), rgb(193, 53, 132), rgb(225, 48, 108), rgb(253, 29, 29)")
   } else if ($(this).val().match(/^tw\/+/g)) {
     $("body").css("background-image", "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)")
+  } else if ($(this).val().match(/^mk\/+/g)) {
+    $("body").css("background-color", "rgb(50,52,55)")
+    $("body").css("color", "rgb(226,183,20)")
   } else {
     $("body").css("background-image", "none");
     $("body").css("background-color", "rgb(27,32,40)");
+    $("body").css("color", "rgb(204,204,181)")
   }
   
 });
@@ -35,7 +39,7 @@ $(document).ready(function(){
         window.open(`${s_input}`, "_self", false);
         $("#search-input").val(''); 
 
-      } else if (s_input.match(/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g)) {
+      } else if (s_input.match(/^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})/g)) {
         // for ip addresses
         window.open(`http://${s_input}`, "_self", false);
         $("#search-input").val(''); 
@@ -72,6 +76,10 @@ $(document).ready(function(){
         // Twitch
         s_input_without_prefix = s_input.replace(/^tw\/+/g, '')
         window.open(`https://www.twitch.com/${s_input_without_prefix}`, "_self", false);
+        $("#search-input").val(''); 
+      } else if (s_input.match(/^mk\/+/g)) {
+        // Monkeytype
+        window.open(`https://www.monkeytype.com/`, "_self", false);
         $("#search-input").val(''); 
       } else {
         window.open(`https://www.google.com/search?q=${s_input}`, "_self", false);
