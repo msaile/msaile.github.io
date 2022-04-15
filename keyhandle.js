@@ -1,19 +1,28 @@
-$("body").keydown(function(e) {
+var clock = document.getElementById("clock");
+var search_input = document.getElementById("search-input");
 
-  if (e.keyCode == 27) {
-    $("body").css("background-color", "rgba(27,32,40,255)");
-    $("#search-input").val('');
-    $("#search-input").blur();
-    $('#search-input').hide();
-    $("#clock").show();
-  } else if (e.keyCode == 91 || e.keyCode == 18 ||
-    e.keyCode == 17 || e.keyCode == 225 || e.keyCode == 8) {
+// Key Listener //
+window.addEventListener('keydown', (event) => {
+  switch(event.code) {
+    case  "Escape":
+      this.document.body.style.backgroundColor = "#002b36";
+      this.document.body.style.backgroundImage = "none";
+      body.style.color = "#93a1a1";
+      clock.style.color = "#93a1a1";
+      search_input.value = "";
+      search_input.blur();
+      search_input.style.display = "none";
+      clock.style.display = "block";
+    case "ScrollLock":
+    case "AltLeft":
+    case "AltRight":
+    case "ControlLeft":
+    case "ControlRight":
+    case "Tab":
       return;
-  } else {
-    $("#clock").hide();
-    $('#search-input').show();
-    $("#search-input").focus();
   }
 
+  clock.style.display = "none";
+  search_input.style.display = "block";
+  search_input.focus();
 });
-
