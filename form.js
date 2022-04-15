@@ -129,3 +129,16 @@ input.addEventListener("keypress", (event) => {
       } 
   }
 })
+
+// -- Checks if input field is out of focus -- //
+input.addEventListener("blur", () => {
+    input.style.display = "none";
+    input.blur();
+    clock.style.display = "block";
+    input.value = "";
+
+    body.style.backgroundImage = "none";
+    body.style.backgroundColor = "#002b36";
+    body.style.color = "#93a1a1";
+    clock.style.color = "#93a1a1";
+})
