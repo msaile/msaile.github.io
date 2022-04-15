@@ -7,10 +7,7 @@
 </td></tr>
 <table>
   
-<img src="https://i.imgur.com/EiWapga.png" align="center">
-
-### TO DO
-- [ ] Replace all JQuery code to JS
+<img src="https://i.imgur.com/ypG9WKA.png" align="center">
   
 <div align="center">
 Based on Tilde Enhanced
