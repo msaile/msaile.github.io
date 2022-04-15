@@ -19,6 +19,8 @@ window.addEventListener('keydown', (event) => {
     case "ControlLeft":
     case "ControlRight":
     case "Tab":
+    case "OSLeft":
+    case "OSRight":
       return;
   }
 
