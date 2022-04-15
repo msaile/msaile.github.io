@@ -78,7 +78,7 @@ input.addEventListener("keypress", (event) => {
       
         // -- Check URL's without http://wwww or https://www
       } else if (input.value.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)) {
-        window.open(`http://www.${input.value}`, "_self", false)
+        window.open(`http://${input.value}`, "_self", false)
         input.value = "";
 
         // -- Check Reddit prefix (r/) -- //
