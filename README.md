@@ -2,7 +2,7 @@
 
 # Yet Another Startpage
 
-*Personal custom startpage for any browser*
+*A minimal startpage for browser*
 
 </td></tr>
 <table>
@@ -11,3 +11,8 @@
 
 ### TO DO
 - [ ] Replace all JQuery code to JS
+  
+<div align="center">
+Based on Tilde Enhanced
+https://github.com/Ozencb/tilde-enhanced
+</div>
