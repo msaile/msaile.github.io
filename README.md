@@ -9,7 +9,5 @@
   
 <img src="https://i.imgur.com/ypG9WKA.png" align="center">
   
-<div align="center">
-Based on Tilde Enhanced
-https://github.com/Ozencb/tilde-enhanced
-</div>
+Based on [Tilde Enhanced](https://github.com/Ozencb/tilde-enhanced)
+
