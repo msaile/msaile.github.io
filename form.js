@@ -12,6 +12,7 @@ function inputVal(input) {
       window.open(`http://${input}`, "_self", false);
       break;
 
+    //// PREFIXES ////
     // -- Check Reddit prefix (r/) -- //
     case /^r\/+/g.test(input):
       window.open(`https://reddit.com/${input}`, "_self", false);
@@ -52,10 +53,31 @@ function inputVal(input) {
       let mk_input = input.replace(/^mk\/+/g, "");
       window.open(`https://monkeytype.com/${mk_input}`, "_self", false);
       break;
+
+
+      //// PREFIXES SEARCH /////
+    // -- Search on Youtube -- //
+    case /^y:/g.test(input):
+      let ys_input = input.replace(/^y:/g, "").replace(" ", "+");
+      window.open(`https://www.youtube.com/results?search_query=${ys_input}`, "_self", false);
+      break;
+    // -- Search on Github -- //
+    case /^g:/g.test(input):
+      let gs_input = input.replace(/^g:/g, "").replace(" ", "+");
+      window.open(`https://github.com/search?q=${gs_input}`, "_self", false);
+      break
+    // -- Search on Twitch -- //
+    case /^tw:/g.test(input):
+      let tws_input = input.replace(/^tw:/g, "");
+      window.open(`https://www.twitch.tv/search?term=${tws_input}`, "_self", false);
+      break
     default:
       window.open(`https://google.com/search?q=${input}`, "_self", false);
       break;
   }
+}
+
+function inputSearch(input) {
 }
 
 function backColor(input) {
@@ -75,6 +97,7 @@ function backColor(input) {
       break;
 
     // -- Background for Youtube -- //
+    case /^y:/g.test(input):
     case /^y\/+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(205, 32, 31), rgb(205, 76, 31))";
       body.style.color = "#ffffff";
@@ -83,6 +106,7 @@ function backColor(input) {
 
     // -- Background for Github -- //
     case /^g\/+/g.test(input):
+    case /^g:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(28, 33, 40), rgb(45, 51, 59)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
@@ -97,6 +121,7 @@ function backColor(input) {
 
     // -- Background for Twitch -- //
     case /^tw\/+/g.test(input):
+    case /^tw:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
