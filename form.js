@@ -136,9 +136,9 @@ function backColor(input) {
 
     default:
       body.style.backgroundImage = "none";
-      body.style.backgroundColor = "#002b36";
-      body.style.color = "#93a1a1";
-      clock.style.color = "#93a1a1";
+      body.style.backgroundColor = "#00040a";
+      body.style.color = "#f7f5f6";
+      clock.style.color = "#f7f5f6";
       break;
     
   }

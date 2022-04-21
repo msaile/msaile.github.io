@@ -7,10 +7,10 @@ var body = document.body
 window.addEventListener('keydown', (event) => {
   switch(event.code) {
     case  "Escape":
-      this.document.body.style.backgroundColor = "#002b36";
+      body.style.backgroundColor = "#00040a";
       this.document.body.style.backgroundImage = "none";
-      body.style.color = "#93a1a1";
-      clock.style.color = "#93a1a1";
+      body.style.color = "#f7f5f6";
+      clock.style.color = "#f7f5f6";
       search_input.value = "";
       search_input.blur();
       search_input.style.display = "none";
@@ -64,7 +64,7 @@ input.addEventListener("blur", () => {
     input.value = "";
 
     body.style.backgroundImage = "none";
-    body.style.backgroundColor = "#002b36";
-    body.style.color = "#93a1a1";
-    clock.style.color = "#93a1a1";
+    body.style.backgroundColor = "#00040a";
+    body.style.color = "#f7f5f6";
+    clock.style.color = "#f7f5f6";
 })

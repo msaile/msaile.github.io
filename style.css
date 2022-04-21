@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url(//db.onlinewebfonts.com/c/04e6981992c0e2e7642af2074ebe3901?family=Helvetica+Now+Display);
 
 :root {
   /* colors */
-  --background: #002b36;
-  --foreground: #93a1a1;
+  --background: #00040a;
+  --foreground: #f7f5f6;
 }
 
 html {
@@ -20,8 +20,8 @@ body {
 }
 
 .clock {
-  color: #93a1a1;
-  font-family: 'Lexend Deca', sans-serif;
+  color: var(--foreground);
+  font-family: 'Helvetica Now Display', sans-serif;
   font-weight: 500;
   font-size: 150px;
   top: 45%;
@@ -42,7 +42,7 @@ body {
 }
 
 textarea {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Helvetica Now Display', sans-serif;
   width: 98%;
   overflow: hidden;
   text-align: center;
@@ -51,7 +51,7 @@ textarea {
   top: 50%;
   display: none;
   resize: none;
-  font-size: 34px;
+  font-size: 40px;
   background: transparent;
   color: inherit;
   border: 0;
