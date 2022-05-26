@@ -82,13 +82,16 @@ function inputVal(input) {
       let tws_input = input.replace(/^tw:/g, "");
       window.open(`https://www.twitch.tv/search?term=${tws_input}`, "_self", false);
       break
+    // -- Check Traslate prefix (tr/) -- //
+    case /^tr\/+/g.test(input):
+      let tr_input = input.replace(/^tr\/+/g, "");
+      window.open(`https://translate.google.com/`, "_self", false);
+      break;
+
     default:
       window.open(`https://google.com/search?q=${input}`, "_self", false);
       break;
   }
-}
-
-function inputSearch(input) {
 }
 
 function backColor(input) {
@@ -155,6 +158,13 @@ function backColor(input) {
     // -- Background for Whatsapp -- //
     case /^w\/+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(37, 211, 102), rgb(18, 140, 126), rgb(7, 94, 84))";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
+    // -- Background for Translate -- //
+    case /^tr\/+/g.test(input):
+      body.style.backgroundColor = "rgb(26, 115, 232)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
