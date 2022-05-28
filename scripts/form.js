@@ -87,7 +87,17 @@ function inputVal(input) {
       let tr_input = input.replace(/^tr\/+/g, "");
       window.open(`https://translate.google.com/`, "_self", false);
       break;
+    // -- Check Discord prefix (dc/) -- //
+    case /^dc\/+/g.test(input):
+      let dc_input = input.replace(/^dc\/+/g, "");
+      window.open(`https://discord.com/app`, "_self", false);
+      break;
 
+    // -- Check Gmail prefix (gm/) -- //
+    case /^gm\/+/g.test(input):
+      let gm_input = input.replace(/^gm\/+/g, "");
+      window.open(`https://gmail.com`, "_self", false);
+      break;
     default:
       window.open(`https://google.com/search?q=${input}`, "_self", false);
       break;
@@ -169,6 +179,19 @@ function backColor(input) {
       clock.style.color = "#ffffff";
       break;
 
+    // -- Background for Discord -- //
+    case /^dc\/+/g.test(input):
+      body.style.backgroundColor = "#7289da";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
+    // -- Background for Gmail -- //
+    case /^gm\/+/g.test(input):
+      body.style.backgroundImage = "linear-gradient(135deg, #dd5145, #dd5145)";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
     default:
       body.style.backgroundImage = "none";
       body.style.backgroundColor = "#00040a";
