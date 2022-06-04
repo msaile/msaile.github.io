@@ -3,7 +3,9 @@ var search_input = document.getElementById("search-input");
 var input = document.getElementById("search-input");
 var body = document.body
 
-// Key Listener //
+/*
+ * KEY LISTENER FOR SPECIFIC KEYS
+ */
 window.addEventListener('keydown', (event) => {
   switch(event.code) {
     case  "Escape":
@@ -32,10 +34,14 @@ window.addEventListener('keydown', (event) => {
 });
 
 
-// -- Listening input field  -- //
+/*
+ * EVENT LISTENER FOR SEARCH INPUT FIELD
+ */
 input.addEventListener("keyup", (event) => {
 
-    // -- Check if input is empty -- //
+   /*
+    * CHECK IF SEARCH FIELD IS EMPTY ON KEYUP
+    */
    if (input.value == "") {
     input.style.display = "none";
     input.blur();
@@ -45,7 +51,9 @@ input.addEventListener("keyup", (event) => {
    }
 })
 
-// -- Avoid enter breaks line -- //
+/*
+ * AVOID ENTER KEY TO BREAK LINE
+ */
 input.addEventListener("keypress", (event) => {
   switch (event.code){
     case "Enter":
@@ -56,7 +64,9 @@ input.addEventListener("keypress", (event) => {
   }
 })
 
-// -- Checks if input field is out of focus -- //
+/*
+ * CHECK IF SEARCH FIELD IS OUT OF FOCUS
+ */
 input.addEventListener("blur", () => {
     input.style.display = "none";
     input.blur();
