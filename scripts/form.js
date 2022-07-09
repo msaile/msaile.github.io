@@ -87,9 +87,15 @@ function inputVal(input) {
       break;
 
     // GMAIL
-    case /^gm\/+/g.test(input):
-      let gm_input = input.replace(/^gm\/+/g, "");
+    case /^m\/+/g.test(input):
+      let gm_input = input.replace(/^m\/+/g, "");
       window.open(`https://gmail.com`, "_self", false);
+      break;
+
+    // NETFLIX
+    case /^n\/+/g.test(input):
+      let n_input = input.replace(/^n\/+/g, "");
+      window.open(`https://netflix.com`, "_self", false);
       break;
 
     /*
@@ -221,11 +227,19 @@ function backColor(input) {
       break;
 
     // GMAIL
-    case /^gm\/+/g.test(input):
+    case /^m\/+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, #dd5145, #dd5145)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
+
+    // NETFLIX
+    case /^n\/+/g.test(input):
+      body.style.backgroundImage = "linear-gradient(135deg, #E50914, #CB020C)";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
     default:
       body.style.backgroundImage = "none";
       body.style.backgroundColor = "#00040a";
