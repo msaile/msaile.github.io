@@ -22,80 +22,93 @@ function inputVal(input) {
      */
 
     // REDDIT
-    case /^r\/+/g.test(input):
+    case /^r+/g.test(input):
       window.open(`https://reddit.com/${input}`, "_self", false);
       break;
 
     // TWITTER
-    case /^tt\/+/g.test(input):
+    case /^tt+/g.test(input):
       let tt_input = input.replace(/^tt\/+/g, "");
       window.open(`https://twitter.com/${tt_input}`, "_self", false);
       break;
 
     // YOUTUBE
-    case /^y\/+/g.test(input):
+    case /^y+/g.test(input):
       let y_input = input.replace(/^y\/+/g, "");
       window.open(`https://youtube.com/${y_input}`, "_self", false);
       break;
 
     // GITHUB
-    case /^g\/+/g.test(input):
+    case /^g+/g.test(input):
       let g_input = input.replace(/^g\/+/g, "");
       window.open(`https://github.com/${g_input}`, "_self", false);
       break;
 
     // INSTAGRAM
-    case /^i\/+/g.test(input):
+    case /^i+/g.test(input):
       let i_input = input.replace(/^i\/+/g, "");
       window.open(`https://instagram.com/${i_input}`, "_self", false);
       break;
 
     // TWITCH
-    case /^tw\/+/g.test(input):
+    case /^tw+/g.test(input):
       let tw_input = input.replace(/^tw\/+/g, "");
       window.open(`https://twitch.com/${tw_input}`, "_self", false);
       break;
 
     // MONKEYTYPE
-    case /^mk\/+/g.test(input):
+    case /^mk+/g.test(input):
       let mk_input = input.replace(/^mk\/+/g, "");
       window.open(`https://monkeytype.com/${mk_input}`, "_self", false);
       break;
 
     // SPOTIFY
-    case /^s\/+/g.test(input):
+    case /^s+/g.test(input):
       let s_input = input.replace(/^s\/+/g, "");
       window.open(`https://open.spotify.com/${s_input}`, "_self", false);
       break;
 
     // WHATSAPP
-    case /^w\/+/g.test(input):
+    case /^w+/g.test(input):
       let w_input = input.replace(/^w\/+/g, "");
       window.open(`https://web.whatsapp.com/${w_input}`, "_self", false);
       break;
 
     // TRANSLATOR
-    case /^tr\/+/g.test(input):
+    case /^tr+/g.test(input):
       let tr_input = input.replace(/^tr\/+/g, "");
       window.open(`https://translate.google.com/`, "_self", false);
       break;
 
     // DISCORD
-    case /^dc\/+/g.test(input):
+    case /^dc+/g.test(input):
       let dc_input = input.replace(/^dc\/+/g, "");
       window.open(`https://discord.com/app`, "_self", false);
       break;
 
     // GMAIL
-    case /^m\/+/g.test(input):
-      let gm_input = input.replace(/^m\/+/g, "");
+    case /^m+/g.test(input):
+      let m_input = input.replace(/^m\/+/g, "");
       window.open(`https://gmail.com`, "_self", false);
       break;
 
     // NETFLIX
-    case /^n\/+/g.test(input):
+    case /^n+/g.test(input):
       let n_input = input.replace(/^n\/+/g, "");
       window.open(`https://netflix.com`, "_self", false);
+      break;
+
+    // HACKTHEBOX
+    case /^htb+/g.test(input):
+      let htb_input = input.replace(/^htb\/+/g, "");
+      window.open(`https://app.hackthebox.com/${htb_input}`, "_self", false);
+      break;
+    
+    // TRYHACKME
+    case /^thm+/g.test(input):
+      let thm_input = input.replace(/^thm\/+/g, "");
+      alert(thm_input)
+      window.open(`https://tryhackme.com/${thm_input}`, "_self", false);
       break;
 
     /*
@@ -145,14 +158,14 @@ function backColor(input) {
    */
   switch (true) {
     // REDDIT
-    case /^r\/+/g.test(input):
+    case /^r+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(255, 132, 86), rgb(255, 69, 0))";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // TWITTER
-    case /^tt\/+/g.test(input):
+    case /^tt+/g.test(input):
     case /^tt:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(29, 161, 242), rgb(25, 96, 143))";
       body.style.color = "#ffffff";
@@ -160,15 +173,15 @@ function backColor(input) {
       break;
 
     // YOUTUBE
+    case /^y+/g.test(input):
     case /^y:/g.test(input):
-    case /^y\/+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(205, 32, 31), rgb(205, 76, 31))";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // GITHUB
-    case /^g\/+/g.test(input):
+    case /^g+/g.test(input):
     case /^g:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(28, 33, 40), rgb(45, 51, 59)";
       body.style.color = "#ffffff";
@@ -176,14 +189,14 @@ function backColor(input) {
       break;
 
     // INSTAGRAM
-    case /^i\/+/g.test(input):
+    case /^i+/g.test(input):
       body.style.backgroundImage = "linear-gradient(45deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), rgb(193, 53, 132), rgb(225, 48, 108), rgb(253, 29, 29)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // TWITCH
-    case /^tw\/+/g.test(input):
+    case /^tw+/g.test(input):
     case /^tw:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(169, 112, 255), rgb(67, 44, 101)";
       body.style.color = "#ffffff";
@@ -191,28 +204,28 @@ function backColor(input) {
       break;
 
     // MONKEYTYPE
-    case /^mk\/+/g.test(input):
+    case /^mk+/g.test(input):
       body.style.backgroundColor = "#323437";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // SPOTIFY
-    case /^s\/+/g.test(input):
+    case /^s+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(29, 211, 94), rgb(30, 215, 96)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // WHATSAPP
-    case /^w\/+/g.test(input):
+    case /^w+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(37, 211, 102), rgb(18, 140, 126), rgb(7, 94, 84))";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // TRANSLATOR
-    case /^tr\/+/g.test(input):
+    case /^tr+/g.test(input):
     case /^tr:/g.test(input):
       body.style.backgroundColor = "rgb(26, 115, 232)";
       body.style.color = "#ffffff";
@@ -220,22 +233,36 @@ function backColor(input) {
       break;
 
     // DISCORD
-    case /^dc\/+/g.test(input):
+    case /^dc+/g.test(input):
       body.style.backgroundColor = "#7289da";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // GMAIL
-    case /^m\/+/g.test(input):
+    case /^m+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, #dd5145, #dd5145)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
 
     // NETFLIX
-    case /^n\/+/g.test(input):
+    case /^n+/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, #E50914, #CB020C)";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
+    // HACKTHEBOX
+    case /^htb+/g.test(input):
+      body.style.backgroundImage = "linear-gradient(135deg, #111927, #141D2B)";
+      body.style.color = "#9fef00";
+      clock.style.color = "#ffffff";
+      break;
+
+    // TRYHACKME
+    case /^thm+/g.test(input):
+      body.style.background = "#1C2538";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
