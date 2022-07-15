@@ -296,7 +296,7 @@ function backColor(input) {
     case /^m\/+/g.test(input):
     case /^m$/g.test(input):
       console.log("m")
-      body.style.background = "#dd5145";
+      body.style.background = "#9b261c";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
